@@ -1,50 +1,47 @@
 {
-  "name": "titaniumlib",
-  "version": "2.0.0",
-  "description": "Titanium SDK Library",
-  "main": "./dist/index",
-  "author": "Axway, Inc. <npmjs@appcelerator.com>",
-  "maintainers": [
-    "Ewan Harris <eharris@axway.com>",
-    "Chris Barber <cbarber@axway.com>"
-  ],
-  "license": "Apache-2.0",
-  "keywords": [
-    "axway",
-    "appcelerator",
-    "titanium",
-    "mobile"
-  ],
-  "scripts": {
-    "build": "gulp build",
-    "coverage": "gulp coverage",
-    "docs": "gulp docs",
-    "prepare": "gulp build",
-    "test": "gulp test"
-  },
-  "dependencies": {
-    "appcd-fs": "^1.1.8",
-    "appcd-path": "^1.1.7",
-    "appcd-util": "^2.0.0",
-    "fs-extra": "^8.1.0",
-    "pluralize": "^8.0.0",
-    "request": "^2.88.0",
-    "semver": "^6.3.0",
-    "snooplogg": "^2.1.0",
-    "source-map-support": "^0.5.13",
-    "tmp": "^0.1.0",
-    "yauzl": "^2.10.0"
-  },
-  "devDependencies": {
-    "appcd-gulp": "^2.2.0"
-  },
-  "homepage": "https://github.com/appcelerator/titaniumlib",
-  "bugs": "https://github.com/appcelerator/titaniumlib/issues",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/appcelerator/titaniumlib.git"
-  },
-  "engines": {
-    "node": ">=8.10.0"
-  }
+	"name": "@titanium/sdk-manager",
+	"version": "0.0.1",
+	"description": "Library for managing Axway Titanium SDKs",
+	"main": "./src/index",
+	"author": "Axway, Inc. <npmjs@appcelerator.com>",
+	"maintainers": [
+		"Brenton House <brenton.house@gmail.com>"
+	],
+	"license": "Apache-2.0",
+	"keywords": [
+		"axway",
+		"appcelerator",
+		"titanium",
+		"mobile",
+		"turbo",
+		"brenton-house"
+	],
+	"scripts": {
+		"list-files": "npm pack && tar -xvzf *.tgz && rm -rf package *.tgz"
+	},
+	"dependencies": {
+		"fs-extra": "^8.1.0",
+		"lodash": "^4.17.15",
+		"pluralize": "^8.0.0",
+		"request": "^2.88.0",
+		"semver": "^6.3.0",
+		"tmp": "^0.1.0",
+		"yauzl": "^2.10.0"
+	},
+	"devDependencies": {
+		"@geek/eslint-config": "0.0.9",
+		"eslint": "^6.3.0"
+	},
+	"homepage": "https://github.com/brentonhouse/titanium-sdk-manager",
+	"bugs": "https://github.com/brentonhouse/titanium-sdk-manager/issues",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/brentonhouse/titanium-sdk-manager.git"
+	},
+	"engines": {
+		"node": ">=8.10.0"
+	},
+	"titanium": {
+		"ignore": true
+	}
 }

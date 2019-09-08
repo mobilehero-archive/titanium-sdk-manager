@@ -1,37 +1,46 @@
-import fs from 'fs-extra';
-import options from './options';
-import path from 'path';
-import request from 'request';
-import semver from 'semver';
-import snooplogg from 'snooplogg';
-import yauzl from 'yauzl';
+/* eslint-disable promise/avoid-new */
+const util = {};
+module.exports = util;
 
-import { arch } from 'appcd-util';
-import { isFile } from 'appcd-fs';
-import { STATUS_CODES } from 'http';
 
-const { log } = snooplogg;
-const { highlight } = snooplogg.styles;
+const fs = require('fs-extra');
+const path = require('path');
+const http = require('http');
+const semver = require('semver');
+const yauzl = require('yauzl');
+const request = require('request');
+
+const { STATUS_CODES } = http;
+
+const options = require('./options');
+
+const { log } = console;
+const highlight = value => value;
+
+
+const legacy = require('./legacy');
+const { isFile } = legacy;
+const { arch } = legacy;
 
 /**
  * The current machine's architecture.
- * @type {String}
+ * @type {string}
  */
-export const architecture = arch();
+util.architecture = arch();
 
 /**
  * The current machine's operating system.
- * @type {String}
+ * @type {string}
  */
-export const os = process.platform === 'darwin' ? 'osx' : process.platform;
+util.os = process.platform === 'darwin' ? 'osx' : process.platform;
 
 /**
  * Mixes the network options into the request params.
  *
- * @param {Object} params - Various request parameters.
- * @returns {Object}
+ * @param {object} params - Various request parameters.
+ * @returns {object}
  */
-export function buildRequestParams(params) {
+util.buildRequestParams = params => {
 	const { network } = options;
 
 	if (!params.agentOptions && network.agentOptions) {
@@ -67,22 +76,22 @@ export function buildRequestParams(params) {
 	}
 
 	return params;
-}
+};
 
 /**
  * Extracts a zip file to the specified destination.
  *
- * @param {Object} params - Various parameters.
- * @param {String} params.dest - The destination to extract the file.
- * @param {String} params.file - The path to the zip file to extract.
- * @returns {Promise}
+ * @param {object} params - Various parameters.
+ * @param {string} params.dest - The destination to extract the file.
+ * @param {string} params.file - The path to the zip file to extract.
+ * @returns {Promise} - Promise that resolves when complete.
  */
-export async function extractZip(params) {
+util.extractZip = async params => {
 	if (!params || typeof params !== 'object') {
 		throw new TypeError('Expected params to be an object');
 	}
 
-	let { dest, file } = params;
+	const { dest, file } = params;
 
 	if (!dest || typeof dest !== 'string') {
 		throw new TypeError('Expected destination directory to be a non-empty string');
@@ -141,18 +150,18 @@ export async function extractZip(params) {
 				.readEntry();
 		});
 	});
-}
+};
 
 /**
  * Fetches a URL and parses the result as JSON.
  *
- * @param {String} url - The URL to request.
+ * @param {string} url - The URL to request.
  * @returns {Promise} Resolves the parsed body.
  */
-export function fetchJSON(url) {
+util.fetchJSON = url => {
 	return new Promise((resolve, reject) => {
 		log(`Fetching ${highlight(url)}`);
-		request(buildRequestParams({ method: 'GET', url }), (err, response, body) => {
+		request(util.buildRequestParams({ method: 'GET', url }), (err, response, body) => {
 			if (err) {
 				return reject(err);
 			}
@@ -175,16 +184,16 @@ export function fetchJSON(url) {
 			}
 		});
 	});
-}
+};
 
 /**
  * Version number comparison helpers.
  *
- * @type {Object}
+ * @type {object}
  */
-export const version = {
+util.version = {
 	format(ver, min, max, chopDash) {
-		ver = ('' + (ver || 0));
+		ver = (`${ver || 0}`);
 		if (chopDash) {
 			ver = ver.replace(/(-.*)?$/, '');
 		}
@@ -200,12 +209,12 @@ export const version = {
 		return ver.join('.');
 	},
 	eq(v1, v2) {
-		return semver.eq(version.format(v1, 3, 3), version.format(v2, 3, 3));
+		return semver.eq(util.version.format(v1, 3, 3), util.version.format(v2, 3, 3));
 	},
 	lt(v1, v2) {
-		return semver.lt(version.format(v1, 3, 3), version.format(v2, 3, 3));
+		return semver.lt(util.version.format(v1, 3, 3), util.version.format(v2, 3, 3));
 	},
 	rcompare(v1, v2) {
-		return version.eq(v1, v2) ? 0 : version.lt(v1, v2) ? 1 : -1;
-	}
+		return util.version.eq(v1, v2) ? 0 : util.version.lt(v1, v2) ? 1 : -1;
+	},
 };
