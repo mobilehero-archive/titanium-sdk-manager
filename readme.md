@@ -1,7 +1,7 @@
-# @titanium/sdk
+# @titanium/sdk-manager
 
-[![@titanium/sdk](https://img.shields.io/npm/v/@titanium/sdk.png)](https://www.npmjs.com/package/@titanium/sdk)
-[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=brentonhouse/titanium-sdk)](https://dependabot.com)
+[![@titanium/sdk-manager](https://img.shields.io/npm/v/@titanium/sdk-manager.png)](https://www.npmjs.com/package/@titanium/sdk-manager)
+[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=brentonhouse/titanium-sdk-manager)](https://dependabot.com)
 
 > Library for installing Axway Titanium SDKs
 > Fork of https://github.com/appcelerator/titaniumlib
@@ -10,14 +10,20 @@
 
 ## 📝 Description
 
-Install Titanium SDKs from ***any*** source.
+Install Titanium SDKs from _**any**_ source.
+
+Key differences from `titaniumlib` module:
+
+1. This module is focused _**only**_ on managing SDKs
+2. Additional support for @geek/config  _(coming soon)_
+3. Allow setting of repo URL for SDKs (in addition to official Axway repo)  _(coming soon)_
 
 ## 🚀 Getting Started
 
-Install npm module
+Install Titanium SDK Manager
 
 ```JavaScript
-npm install @titanium/sdk
+npm install @titanium/sdk-manager
 ```
 
 ## 🔗 Related Links
