@@ -11,9 +11,11 @@
 * [🚀 Getting Started](#-getting-started)
 	* [Install Titanium SDK Manager](#install-titanium-sdk-manager)
 	* [Get available SDK releases](#get-available-sdk-releases)
+	* [Get available SDK releases _(Alternate Repo)_](#get-available-sdk-releases-_alternate-repo_)
 	* [Get available SDK branches](#get-available-sdk-branches)
 	* [Get available SDK builds](#get-available-sdk-builds)
 	* [Install latest SDK release](#install-latest-sdk-release)
+	* [Install SDK Release Candidate (RC)](#install-sdk-release-candidate-rc)
 * [🔗 Related Links](#-related-links)
 * [📣 Feedback](#-feedback)
 * [©️ Legal](#️-legal)
@@ -38,6 +40,23 @@ npm install @titanium/sdk-manager
 
 ### Get available SDK releases
 
+> Using Official Axway Repository
+
+```JavaScript
+sdk.getReleases()
+	.then(releases => {
+		console.log(`releases: ${JSON.stringify(releases, null, 2)}`);
+	})
+	.catch(error => {
+		console.error('you are here → Error occurred!');
+		console.error(error);
+	});
+```
+
+### Get available SDK releases _(Alternate Repo)_
+
+> Using Alternate Repository
+
 ```JavaScript
 sdk.getReleases()
 	.then(releases => {
@@ -50,6 +69,8 @@ sdk.getReleases()
 ```
 
 ### Get available SDK branches
+
+> Using Official Axway Repository
 
 ```JavaScript
 sdk.getBranches()
@@ -64,6 +85,8 @@ sdk.getBranches()
 
 ### Get available SDK builds
 
+> Using Official Axway Repository
+
 ```JavaScript
 sdk.getBuilds()
 	.then(builds => {
@@ -75,12 +98,29 @@ sdk.getBuilds()
 	});
 ```
 
-### Install latest SDK release
+### Install latest SDK release 
+
+> Using Official Axway Repository
 
 ```JavaScript
 sdk.install()
 	.then(result => {
-		console.log(`result: ${JSON.stringify(result, null, 2)}`);
+		console.log('** SDK Installed **');
+	})
+	.catch(error => {
+		console.error('you are here → Error occurred!');
+		console.error(error);
+	});
+```
+
+### Install SDK Release Candidate (RC)
+
+> Using Alternate Repository
+
+```JavaScript
+sdk.getReleases({ releasesUrl: 'https://brentonhouse.github.io/titanium-sdk-repo/releases.json'  })
+	.then(releases => {
+		console.log('** SDK Installed **');
 	})
 	.catch(error => {
 		console.error('you are here → Error occurred!');
