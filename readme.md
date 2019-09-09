@@ -3,8 +3,9 @@
 [![@titanium/sdk-manager](https://img.shields.io/npm/v/@titanium/sdk-manager.png)](https://www.npmjs.com/package/@titanium/sdk-manager)
 [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=brentonhouse/titanium-sdk-manager)](https://dependabot.com)
 
-> Library for installing Axway Titanium SDKs
+> Library for installing Axway Titanium SDKs   
 > Fork of https://github.com/appcelerator/titaniumlib
+
 
 
 * [📝 Description](#-description)
@@ -42,6 +43,7 @@ npm install @titanium/sdk-manager
 
 > Using Official Axway Repository
 
+
 ```JavaScript
 sdk.getReleases()
 	.then(releases => {
@@ -57,8 +59,9 @@ sdk.getReleases()
 
 > Using Alternate Repository
 
+
 ```JavaScript
-sdk.getReleases()
+sdk.getReleases({ releasesUrl: 'https://brentonhouse.github.io/titanium-sdk-repo/releases.json'  })
 	.then(releases => {
 		console.log(`releases: ${JSON.stringify(releases, null, 2)}`);
 	})
@@ -71,6 +74,7 @@ sdk.getReleases()
 ### Get available SDK branches
 
 > Using Official Axway Repository
+
 
 ```JavaScript
 sdk.getBranches()
@@ -87,6 +91,7 @@ sdk.getBranches()
 
 > Using Official Axway Repository
 
+
 ```JavaScript
 sdk.getBuilds()
 	.then(builds => {
@@ -102,6 +107,7 @@ sdk.getBuilds()
 
 > Using Official Axway Repository
 
+
 ```JavaScript
 sdk.install()
 	.then(result => {
@@ -116,6 +122,7 @@ sdk.install()
 ### Install SDK Release Candidate (RC)
 
 > Using Alternate Repository
+
 
 ```JavaScript
 sdk.getReleases({ releasesUrl: 'https://brentonhouse.github.io/titanium-sdk-repo/releases.json'  })
