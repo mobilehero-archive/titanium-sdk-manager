@@ -7,6 +7,16 @@
 > Fork of https://github.com/appcelerator/titaniumlib
 
 
+* [📝 Description](#-description)
+* [🚀 Getting Started](#-getting-started)
+	* [Install Titanium SDK Manager](#install-titanium-sdk-manager)
+	* [Get available SDK releases](#get-available-sdk-releases)
+	* [Get available SDK branches](#get-available-sdk-branches)
+	* [Get available SDK builds](#get-available-sdk-builds)
+	* [Install latest SDK release](#install-latest-sdk-release)
+* [🔗 Related Links](#-related-links)
+* [📣 Feedback](#-feedback)
+* [©️ Legal](#️-legal)
 
 ## 📝 Description
 
@@ -16,15 +26,70 @@ Key differences from `titaniumlib` module:
 
 1. This module is focused _**only**_ on managing SDKs
 2. Additional support for @geek/config  _(coming soon)_
-3. Allow setting of repo URL for SDKs (in addition to official Axway repo)  _(coming soon)_
+3. Allow setting of repo URL for SDKs (in addition to official Axway repo) 
 
 ## 🚀 Getting Started
 
-Install Titanium SDK Manager
+### Install Titanium SDK Manager
 
 ```JavaScript
 npm install @titanium/sdk-manager
 ```
+
+### Get available SDK releases
+
+```JavaScript
+sdk.getReleases()
+	.then(releases => {
+		console.log(`releases: ${JSON.stringify(releases, null, 2)}`);
+	})
+	.catch(error => {
+		console.error('you are here → Error occurred!');
+		console.error(error);
+	});
+```
+
+### Get available SDK branches
+
+```JavaScript
+sdk.getBranches()
+	.then(branches => {
+		console.log(`branches: ${JSON.stringify(branches, null, 2)}`);
+	})
+	.catch(error => {
+		console.error('you are here → Error occurred!');
+		console.error(error);
+	});
+```
+
+### Get available SDK builds
+
+```JavaScript
+sdk.getBuilds()
+	.then(builds => {
+		console.log(`builds: ${JSON.stringify(builds, null, 2)}`);
+	})
+	.catch(error => {
+		console.error('you are here → Error occurred!');
+		console.error(error);
+	});
+```
+
+### Install latest SDK release
+
+```JavaScript
+sdk.install()
+	.then(result => {
+		console.log(`result: ${JSON.stringify(result, null, 2)}`);
+	})
+	.catch(error => {
+		console.error('you are here → Error occurred!');
+		console.error(error);
+	});
+```
+
+
+
 
 ## 🔗 Related Links
 

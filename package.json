@@ -2,7 +2,7 @@
 	"name": "@titanium/sdk-manager",
 	"version": "0.0.1",
 	"description": "Library for managing Axway Titanium SDKs",
-	"main": "./src/index",
+	"main": "./lib/sdk-manager",
 	"author": "Axway, Inc. <npmjs@appcelerator.com>",
 	"maintainers": [
 		"Brenton House <brenton.house@gmail.com>"
