@@ -31,7 +31,7 @@
 	},
 	"devDependencies": {
 		"@geek/eslint-config": "0.0.9",
-		"eslint": "^6.3.0"
+		"eslint": "^6.4.0"
 	},
 	"homepage": "https://github.com/brentonhouse/titanium-sdk-manager",
 	"bugs": "https://github.com/brentonhouse/titanium-sdk-manager/issues",
