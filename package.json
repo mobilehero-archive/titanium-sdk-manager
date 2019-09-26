@@ -1,6 +1,6 @@
 {
 	"name": "@titanium/sdk-manager",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"description": "Library for managing Axway Titanium SDKs",
 	"main": "./lib/sdk-manager",
 	"author": "Axway, Inc. <npmjs@appcelerator.com>",
@@ -18,7 +18,8 @@
 	],
 	"scripts": {
 		"list-files": "npm pack && tar -xvzf *.tgz && rm -rf package *.tgz",
-		"test": "npm install --ignore-scripts && npm run list-files"
+		"test": "npm install --ignore-scripts && npm run list-files",
+		"prepublishOnly": "git pull && bump"
 	},
 	"dependencies": {
 		"fs-extra": "^8.1.0",
