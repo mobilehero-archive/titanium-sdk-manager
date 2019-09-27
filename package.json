@@ -1,6 +1,6 @@
 {
 	"name": "@titanium/sdk-manager",
-	"version": "0.0.4",
+	"version": "0.0.5",
 	"description": "Library for managing Axway Titanium SDKs",
 	"main": "./lib/sdk-manager",
 	"author": "Axway, Inc. <npmjs@appcelerator.com>",
