@@ -9,7 +9,10 @@ Jenkinsfile
 /src
 /test
 .editorconfig
-
+.eslintignore
+original-changelog.md
+original-readme.md
+.dependabot
 
 ._*
 .DS_Store*
