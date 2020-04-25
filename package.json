@@ -32,7 +32,7 @@
 		"pluralize": "^8.0.0",
 		"request": "^2.88.0",
 		"semver": "^6.3.0",
-		"tmp": "^0.1.0",
+		"tmp": "^0.2.0",
 		"yauzl": "^2.10.0"
 	},
 	"devDependencies": {
