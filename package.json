@@ -36,7 +36,7 @@
 		"yauzl": "^2.10.0"
 	},
 	"devDependencies": {
-		"@geek/eslint-config": "0.0.10",
+		"@geek/eslint-config": "0.0.12",
 		"eslint": "^6.7.1"
 	},
 	"homepage": "https://github.com/brentonhouse/titanium-sdk-manager",
