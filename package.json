@@ -1,7 +1,7 @@
 {
 	"name": "@titanium/sdk-manager",
-	"version": "0.0.6",
-	"description": "Library for managing Axway Titanium SDKs",
+	"version": "1.0.1",
+	"description": "Axway Amplify module for managing and installing SDK for Appcelerator Titanium apps",
 	"main": "./lib/sdk-manager",
 	"author": "Axway, Inc. <npmjs@appcelerator.com>",
 	"maintainers": [
@@ -19,12 +19,21 @@
 		"mobile",
 		"turbo",
 		"sdk",
+		"plugin",
+		"amplify",
+		"api-builder",
+		"appcelerator-titanium",
+		"titanium-sdk",
+		"titanium-mobile",
+		"titanium-module",
+		"axway-sdk",
+		"axway-amplify",
 		"brenton-house"
 	],
 	"scripts": {
 		"list-files": "npm pack && tar -xvzf *.tgz && rm -rf package *.tgz",
 		"test": "npm install --ignore-scripts && npm run list-files",
-		"prepublishOnly": "git pull && bump"
+		"prepublishOnly": "git pull && bump insane"
 	},
 	"dependencies": {
 		"fs-extra": "^8.1.0",
@@ -39,7 +48,7 @@
 		"@geek/eslint-config": "0.0.9",
 		"eslint": "^6.4.0"
 	},
-	"homepage": "https://github.com/brentonhouse/titanium-sdk-manager",
+	"homepage": "https://brenton.house/saying-goodbye-to-axway-amplify-titanium-31a44f3671de",
 	"bugs": "https://github.com/brentonhouse/titanium-sdk-manager/issues",
 	"repository": {
 		"type": "git",

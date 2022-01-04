@@ -1,11 +1,28 @@
-
-<a href="#titaniumsdk-manager">
+<a href="https://brenton.house/saying-goodbye-to-axway-amplify-titanium-31a44f3671de">
+	<h1 align="center">
+	🪦 RIP Axway Amplify Titanium (2010 - 2022)
+	</h1>
+</a>
+<a href="https://brenton.house/saying-goodbye-to-axway-amplify-titanium-31a44f3671de">
 	<p align="center">
-		<img src="https://cdn.secure-api.org/images/warning-sign-area51.png" width="80%" />
-		<img src="https://cdn.secure-api.org/images/border-line-3.png" width="70%" height="50" />
+		<img src="https://cdn.secure-api.org/images/RIP-Axway-Amplify-Titanium.png" alt="RIP Axway Amplify Titanium (2010 - 2022)" width="80%" />
 	</p>
 </a>
-
+<a href="https://brenton.house/saying-goodbye-to-axway-amplify-titanium-31a44f3671de">
+	<p align="center">
+		🪦 &nbsp; RIP Axway Amplify Titanium (2010 - 2022)
+	</p>
+</a>
+<p>&nbsp;</p>
+<a href="https://brenton.house/saying-goodbye-to-axway-amplify-titanium-31a44f3671de">
+	<h2 align="center">
+		🛑 This project is no longer being maintained 🛑
+	</h2>
+</a>
+<p>&nbsp;</p>
+<hr>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 # @titanium/sdk-manager
 
 [![@titanium/sdk-manager](https://img.shields.io/npm/v/@titanium/sdk-manager.png)](https://www.npmjs.com/package/@titanium/sdk-manager)
@@ -19,7 +36,7 @@
 * [🚀 Getting Started](#-getting-started)
 	* [Install Titanium SDK Manager](#install-titanium-sdk-manager)
 	* [Get available SDK releases](#get-available-sdk-releases)
-	* [Get available SDK releases _(Alternate Repo)_](#get-available-sdk-releases-_alternate-repo_)
+	* [Get available SDK releases _(Alternate Repo)_](#get-available-sdk-releases-alternate-repo)
 	* [Get available SDK branches](#get-available-sdk-branches)
 	* [Get available SDK builds](#get-available-sdk-builds)
 	* [Install latest SDK release](#install-latest-sdk-release)
