@@ -45,8 +45,8 @@
 		"yauzl": "^2.10.0"
 	},
 	"devDependencies": {
-		"@geek/eslint-config": "0.0.9",
-		"eslint": "^6.4.0"
+		"@geek/eslint-config": "0.0.10",
+		"eslint": "^6.7.1"
 	},
 	"homepage": "https://brenton.house/saying-goodbye-to-axway-amplify-titanium-31a44f3671de",
 	"bugs": "https://github.com/brentonhouse/titanium-sdk-manager/issues",
