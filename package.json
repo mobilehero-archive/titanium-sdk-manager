@@ -1,6 +1,6 @@
 {
 	"name": "@titanium/sdk-manager",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Axway Amplify module for managing and installing SDK for Appcelerator Titanium apps",
 	"main": "./lib/sdk-manager",
 	"author": "Axway, Inc. <npmjs@appcelerator.com>",
