@@ -1,6 +1,6 @@
 {
 	"name": "@titanium/sdk-manager",
-	"version": "1.0.4",
+	"version": "1.0.5",
 	"description": "⭐  Axway Amplify module for managing and installing SDK for Appcelerator Titanium SDK",
 	"main": "./lib/sdk-manager",
 	"author": "Axway, Inc. <npmjs@appcelerator.com>",
@@ -31,9 +31,10 @@
 		"brenton-house"
 	],
 	"scripts": {
-		"list-files": "npm pack && tar -xvzf *.tgz && rm -rf package *.tgz",
-		"prep": "npm install --ignore-scripts && npm run list-files",
-		"test": "npm install --ignore-scripts && npm run prep",
+		"lint": "eslint . --fix",
+		"list": "npm pack && tar -xvzf *.tgz && rm -rf package *.tgz",
+		"prep": "npm install --ignore-scripts && npm run list",
+		"test": "npm run prep",
 		"prepublishOnly2": "git pull && npm test && bump insane",
 		"prepublishOnly": "git pull && npm test && npm audit fix && bump insane"
 	},
