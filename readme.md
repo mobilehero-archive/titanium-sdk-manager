@@ -23,6 +23,7 @@
 <hr>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+
 # @titanium/sdk-manager
 
 [![@titanium/sdk-manager](https://img.shields.io/npm/v/@titanium/sdk-manager.png)](https://www.npmjs.com/package/@titanium/sdk-manager)
