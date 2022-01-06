@@ -27,6 +27,7 @@
 <p>&nbsp;</p>
 
 [//]: # (header-end)
+
 # @titanium/sdk-manager
 
 [![@titanium/sdk-manager](https://img.shields.io/npm/v/@titanium/sdk-manager.png)](https://www.npmjs.com/package/@titanium/sdk-manager)
