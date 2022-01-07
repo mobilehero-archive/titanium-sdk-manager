@@ -1,7 +1,7 @@
 {
 	"name": "@titanium/sdk-manager",
-	"version": "1.0.8",
-	"description": "⭐  Axway Amplify module for managing and installing SDK for Appcelerator Titanium SDK",
+	"version": "1.0.9",
+	"description": "⭐  Axway Amplify module for managing and installing SDK for Appcelerator Titanium SDK Framework",
 	"main": "./lib/sdk-manager",
 	"author": "Axway, Inc. <npmjs@appcelerator.com>",
 	"maintainers": [
@@ -34,19 +34,34 @@
 	"scripts": {
 		"lint": "eslint . --fix",
 		"list": "npm pack && tar -xvzf *.tgz && rm -rf package *.tgz",
-		"prep": "npm install --ignore-scripts && npm run list",
+		"prep": "npm install --ignore-scripts",
 		"test": "npm run prep",
-		"prepublishOnly2": "git pull && npm test && bump insane",
-		"prepublishOnly": "git pull && npm test && npm audit fix && bump insane"
+		"prepublishOnly": "git pull && npm test && bump insane",
+		"prepublishOnly2": "git pull && npm test && npm audit fix && bump insane"
 	},
 	"dependencies": {
-		"@geek/logger": "^1.0.17",
+		"@geek/cache": "^1.0.2",
+		"@geek/config": "^0.2.4",
+		"@geek/dotenv": "^0.0.9",
+		"@geek/jsonc": "^1.0.4",
+		"@geek/jwt": "^1.0.1",
+		"@geek/logger": "^1.0.18",
+		"@geek/retry": "^1.0.0",
+		"@geek/spawn": "^0.0.3",
+		"@geek/spinner": "^1.0.0",
+		"@geek/tld": "^2.0.1-1",
 		"@titanium/bluebird": "^3.7.8",
 		"@titanium/errors": "^1.0.5",
-		"@titanium/essentials": "^1.0.35",
+		"@titanium/essentials": "^1.0.36",
+		"@titanium/events": "^1.0.18",
+		"@titanium/eventsource": "^1.0.3",
 		"@titanium/jwt": "^1.0.8",
 		"@titanium/module-copier": "^1.0.13",
 		"@titanium/please": "^1.0.16",
+		"@titanium/polyfill": "^1.0.17",
+		"@titanium/querystring": "^1.0.2",
+		"@titanium/tiapp-xml": "^1.0.11",
+		"@titanium/titanium": "^5.4.7",
 		"@titanium/turbo": "^2.2.22",
 		"fs-extra": "^10.0.0",
 		"lodash": "^4.17.21",
@@ -57,13 +72,13 @@
 		"yauzl": "^2.10.0"
 	},
 	"devDependencies": {
-		"@geek/eslint-config": "1.0.3",
+		"@geek/eslint-config": "^1.0.3",
 		"eslint": "^8.6.0"
 	},
-	"bugs": "https://github.com/brentonhouse/titanium-sdk-manager/issues",
+	"bugs": "https://github.com/mobilehero-archive/titanium-sdk-manager/issues",
 	"repository": {
 		"type": "git",
-		"url": "git://github.com/brentonhouse/titanium-sdk-manager.git"
+		"url": "git://github.com/mobilehero-archive/titanium-sdk-manager.git"
 	},
 	"engines": {
 		"node": ">=8.10.0"

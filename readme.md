@@ -31,10 +31,7 @@
 # @titanium/sdk-manager
 
 [![@titanium/sdk-manager](https://img.shields.io/npm/v/@titanium/sdk-manager.png)](https://www.npmjs.com/package/@titanium/sdk-manager)
-[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=brentonhouse/titanium-sdk-manager)](https://dependabot.com)
-
-> _**This is not an official Axway product.**_    
-> _It is an experiment by [Brenton House](https://brenton.house) using open-source projects.  You are welcome to try it out but be aware of the risks_
+[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=mobilehero-archive/titanium-sdk-manager)](https://dependabot.com)
 
 
 * [📝 Description](#-description)
